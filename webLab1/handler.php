@@ -12,14 +12,14 @@ if (!isset($_SESSION["results"])) {
 $x = "";
 $y = "";
 $r = "";
-if(isset($_POST["X"])){
-    $x = $_POST["X"];
+if(isset($_POST["x"])){
+    $x = $_POST["x"];
 }
-if(isset($_POST["Y"])){
-    $y = $_POST["Y"];
+if(isset($_POST["y"])){
+    $y = $_POST["y"];
 }
-if(isset($_POST["R"])){
-    $r = $_POST["R"];
+if(isset($_POST["r"])){
+    $r = $_POST["r"];
 }
 
 $validator = new CoordinatesValidator($x, $y, $r);
