@@ -27,8 +27,6 @@ form.addEventListener('submit', () => {
         .then(function (serverAnswer) {
             localStorage.setItem("session", serverAnswer);
             document.getElementById("output").innerHTML = serverAnswer;
-            // addToTable(xVal, yVal, rVal, responseData.result, responseData.curr_time, responseData.exec_time);
-            // saveToLocalStorage(xVal, yVal, rVal, responseData.result, responseData.curr_time, responseData.exec_time);
         })
         .catch(error => {
             alert(`There was an error processing your request: ${error.message}`)
