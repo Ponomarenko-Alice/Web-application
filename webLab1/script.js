@@ -1,13 +1,20 @@
-const form = document.querySelector('.main_form');
+const button = document.getElementById("submit");
+var form = document.querySelector(".main_form");
 
-form.addEventListener('submit', () => {
-    const x = "1",
+button.addEventListener('click', () => {
+    let x= form.querySelector('.checkbox:checked').value,
     y = form.querySelector('[name="y"]').value,
     r = form.querySelector('[name="r"]').value;
 
 
-    fetch(`./handler.php?x=${x}&y=${y}&r=${r}`, {
+    var params = new URLSearchParams(); 
+    params.set('x', x);
+    params.set('y', y);
+    params.set('r', r);
+
+    fetch(`./handler.php`, {
         method: 'POST',
+        body: params
     })
         .then(response => {
             if (!response.ok) {
@@ -17,6 +24,7 @@ form.addEventListener('submit', () => {
             return $responseText;
         })
         .then(function (serverAnswer) {
+            console.log(serverAnswer)
             localStorage.setItem("session", serverAnswer);
             document.getElementById("output").innerHTML = serverAnswer;
         })

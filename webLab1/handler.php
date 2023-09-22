@@ -62,7 +62,6 @@ if ($validator->checkCoordinates()) {
     
 }
 else {
-    echo "validation faild";
-
+    echo "validation faild $x, $y, $r";
 }
 

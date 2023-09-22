@@ -35,7 +35,6 @@
 
             form {
                 line-height: 1.5;
-                
             }
 
             .main_table {
@@ -140,15 +139,15 @@
                                 <selectionX text-align="left">-3 -2 -1 0 1 2 3 4 5<br> </selectionX> 
                                 
                                 <div id="x">
-                                    <input type="checkbox" name="x" value="-3"/>
-                                    <input type="checkbox" name="x" value="-2"/>
-                                    <input type="checkbox" name="x" value="-1"/>
-                                    <input type="checkbox" name="x" value="0"/>
-                                    <input type="checkbox" name="x" value="1"/>
-                                    <input type="checkbox" name="x" value="2"/>
-                                    <input type="checkbox" name="x" value="3"/>
-                                    <input type="checkbox" name="x" value="4"/>
-                                    <input type="checkbox" name="x" value="5"/>
+                                    <input type="checkbox" class="checkbox" name="x[]" value="-3"/>
+                                    <input type="checkbox" class="checkbox" name="x[]" value="-2"/>
+                                    <input type="checkbox" class="checkbox" name="x[]" value="-1"/>
+                                    <input type="checkbox" class="checkbox" name="x[]" value="0"/>
+                                    <input type="checkbox" class="checkbox" name="x[]" value="1"/>
+                                    <input type="checkbox" class="checkbox" name="x[]" value="2"/>
+                                    <input type="checkbox" class="checkbox" name="x[]" value="3"/>
+                                    <input type="checkbox" class="checkbox" name="x[]" value="4"/>
+                                    <input type="checkbox" class="checkbox" name="x[]" value="5"/>
                                 </div> 
                                 
                                 enter y: {-5...5}<br>
@@ -160,14 +159,14 @@
                                 <selectionR> 1 2 3 4 5<br></selectionR>
                                 
                                 <div id="r">
-                                    <label><input type="radio" name="r" value="1"/></label>
+                                    <label><input type="radio" name="r" value="5"/></label>
                                     <label><input type="radio" name="r" value="2" /></label>
                                     <label><input type="radio" name="r" value="3" /></label>
                                     <label><input type="radio" name="r" value="4"/></label>
-                                    <label><input type="radio" name="r" value="5"/></label>
+                                    <label><input type="radio" name="r" value="1"/></label>
                                 </div>
                                 
-                                <button type="submit"> check</button>
+                                <button type="button" id="submit"> check</button>
                             </form>
                             </div>
                         </td>
@@ -177,16 +176,6 @@
                         <td colspan="2">
                             <div class="reusltTable">
                                 <table width="100%" id="resultTable" cellspacing="0">
-                                    <thead>
-                                    <tr>
-                                        <th>x</th>
-                                        <th>y</th>
-                                        <th>r</th>
-                                        <th>hit or not</th>
-                                        <th>current time and date</th>
-                                        <th>duration of script running</th>
-                                    </tr>
-                                    </thead>
                                     <tbody id="output">
                                         <tr>
                                             <th class="x1">x1</th>
