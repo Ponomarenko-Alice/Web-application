@@ -17,11 +17,11 @@ export class Validator {
     }
  
     validation() {
-        return this.checkX && this.checkY && this.checkR;
+        return this.checkX() && this.checkY() && this.checkR();
     }
 
     checkX() {
-        if (xEntity.length > 1) {
+        if (this.xEntity.length > 1) {
             this.message = "Enter only one value of X coordinate";
             return false;
         } else if (this.xEntity.value = ""){
@@ -40,7 +40,7 @@ export class Validator {
         } else if (currentY === ""){
             this.message = "Enter Y value. It can't be empty";
             return false;
-        } else if (![-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5].includes(currentY)) {
+        } else if (!['-5', '-4', '-3', '-2', '-1', '0', '1', '2', '3', '4', '5'].includes(currentY)) {
             this.message = "Y value must be from -5 to 5";
             return false;
         } else { 

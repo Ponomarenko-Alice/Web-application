@@ -1,7 +1,7 @@
 <?php
 
-require __DIR__ . "/CoordinatesValidator.php";
-require __DIR__ . "/PointChecker.php";
+require __DIR__ . "/coordinatesValidator.php";
+require __DIR__ . "/pointChecker.php";
 
 @session_start();
 
@@ -22,9 +22,9 @@ if(isset($_POST["r"])){
     $r = $_POST["r"];
 }
 
-$validator = new CoordinatesValidator($x, $y, $r);
+$validator = new coordinatesValidator($x, $y, $r);
 if ($validator->checkCoordinates()) {
-        $pointIsIsArea = PointChecker::isInArea($x, $y, $r);
+        $pointIsIsArea = pointChecker::isInArea($x, $y, $r);
         $coordinate_status = $pointIsIsArea
         ? "<span class='yes'>yes</span>"
         : "<span class='no'>no</span>";

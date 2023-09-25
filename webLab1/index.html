@@ -15,8 +15,7 @@
             }
 
             selectionX {
-                word-spacing: 8px;
-                margin-left: 3px;
+                word-spacing: 9px;
                 text-align: left;
             }
 
@@ -159,14 +158,14 @@
                                 <selectionR> 1 2 3 4 5<br></selectionR>
                                 
                                 <div id="r">
-                                    <label><input type="radio" name="r" value="5"/></label>
+                                    <label><input type="radio" name="r" value="1"/></label>
                                     <label><input type="radio" name="r" value="2" /></label>
                                     <label><input type="radio" name="r" value="3" /></label>
                                     <label><input type="radio" name="r" value="4"/></label>
-                                    <label><input type="radio" name="r" value="1"/></label>
+                                    <label><input type="radio" name="r" value="5"/></label>
                                 </div>
                                 
-                                <button type="button" id="submit"> check</button>
+                                <button type="button" id="submit">check</button>
                             </form>
                             </div>
                         </td>
@@ -178,12 +177,12 @@
                                 <table width="100%" id="resultTable" cellspacing="0">
                                     <tbody id="output">
                                         <tr>
-                                            <th class="x1">x1</th>
-                                            <th>y1</th>
-                                            <th>r1</th>
-                                            <th>1hit or not</th>
-                                            <th>1current time and date</th>
-                                            <th>1duration of script running</th>
+                                            <th class="x1">x</th>
+                                            <th>y</th>
+                                            <th>r</th>
+                                            <th>status</th>
+                                            <th>current time</th>
+                                            <th>duration of script running</th>
                                     </tbody>
                                 </table>     
                             </div>
@@ -192,7 +191,7 @@
                     
                 </tbody>
             </table> </div>
-            <script src="script.js"></script>
+            <script type="module" src="script.js"></script>
         </body>
     </div>
 </html>
