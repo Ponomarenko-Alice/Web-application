@@ -5,7 +5,7 @@ let form = document.querySelector(".main_form");
 
 
 
-button.addEventListener('click', () => {
+button.addEventListener('click', async () => {
     let xEntity = form.querySelectorAll('.checkbox:checked'),
     yEntity = form.querySelector('[name="y"]'),
     rEntity = form.querySelector('[name="r"]:checked');
@@ -19,23 +19,21 @@ button.addEventListener('click', () => {
         params.set('y', y);
         params.set('r', r);
 
-        fetch(`../php/handler.php`, {
+
+        let response = await fetch(`../php/handler.php`, {
             method: 'POST',
             body: params
         })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Server responded with bad getaway status: ${response.status}`);
-                }
-                return response.text();;
-            })
-            .then(function (serverAnswer) {
-                localStorage.setItem("session", serverAnswer);
-                document.getElementById("output").innerHTML = serverAnswer;
-            })
-            .catch(error => {
-                alert(`There was an error processing your request: ${error.message}`)
-            })
+        try {
+            if (!response.ok) {
+                throw new Error(`Server responded with bad getaway status: ${response.status}`);
+            }
+            let serverAnswer = await response.text();
+            localStorage.setItem("session", serverAnswer);
+            document.getElementById("output").innerHTML = serverAnswer;
+        } catch (err) {
+            alert(`There was an error processing your request: ${err.message}`)
+        }
     } else {
         alert(validator.message);
     }
