@@ -6,12 +6,12 @@ body {
     margin-top: 40px;  
 }
 
-selectionX {
+.selectionX {
     word-spacing: 9px;
     text-align: left;
 }
 
-selectionR {
+.selectionR {
     word-spacing: 13px;
     margin-left: 7px;
 }

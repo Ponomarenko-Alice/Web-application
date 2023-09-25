@@ -4,76 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lab1</title>
-
-        <style>
-            body {
-                background-color: #f0f8ff;
-            }
-
-            .body {
-                margin-top: 40px;  
-            }
-
-            selectionX {
-                word-spacing: 9px;
-                text-align: left;
-            }
-
-            selectionR {
-                word-spacing: 13px;
-                margin-left: 7px;
-            }
-
-            header {
-                font-family: fantasy;
-                color: #37436a;
-                font-size: 18px;
-                font-weight: 100;
-                text-align: center;
-            }
-
-            form {
-                line-height: 1.5;
-            }
-
-            .main_table {
-                border: 1px solid black;
-                border-color: black;
-                font-weight: 100;
-                background-color: rgb(217, 224, 250);
-                margin: auto;
-                margin-top: 20px;
-                width: 80%;
-                text-align: center;
-            }
-
-            .result_table {
-                font-weight: 100;
-                margin: auto;
-                text-align: center;
-            }
-
-            td, th {
-                border: 1px solid black;
-                border-color: black;
-                font-weight: 100;
-                background-color: rgb(217, 224, 250);
-                margin: auto;
-                text-align: center;
-            }
-
-            tr {
-                font-weight: 100;
-                font-variant: small-caps;
-                color: #37436a;
-                font-size: 18px;
-            }
-            .output tr th{
-                border: 0px;
-            }
-         
-        </style>
-    </head>
+        <link rel="stylesheet" href="style.css"></head>
 
     <div class="body">
         <body>
@@ -135,7 +66,7 @@
                                     enter x:<br>
                             
                             
-                                <selectionX text-align="left">-3 -2 -1 0 1 2 3 4 5<br> </selectionX> 
+                                <div class="SelectionX" text-align="left">-3 -2 -1 0 1 2 3 4 5<br> </div> 
                                 
                                 <div id="x">
                                     <input type="checkbox" class="checkbox" name="x[]" value="-3"/>
@@ -155,7 +86,7 @@
                             
                                 <br>enter r:<br>
                             
-                                <selectionR> 1 2 3 4 5<br></selectionR>
+                                <div class="selectionR"> 1 2 3 4 5<br></div>
                                 
                                 <div id="r">
                                     <label><input type="radio" name="r" value="1"/></label>
