@@ -4,7 +4,8 @@ var form = document.querySelector(".main_form");
 button.addEventListener('click', () => {
     let x= form.querySelector('.checkbox:checked').value,
     y = form.querySelector('[name="y"]').value,
-    r = form.querySelector('[name="r"]').value;
+    r = form.querySelector('[name="r"]:checked').value;
+    console.log(r);
 
 
     var params = new URLSearchParams(); 
