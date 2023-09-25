@@ -27,7 +27,7 @@ button.addEventListener('click', () => {
                 if (!response.ok) {
                     throw new Error(`Server responded with bad getaway status: ${response.status}`);
                 }
-                $responseText = response.text();
+                let $responseText = response.text();
                 return $responseText;
             })
             .then(function (serverAnswer) {
