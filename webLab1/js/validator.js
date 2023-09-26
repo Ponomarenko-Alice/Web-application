@@ -49,7 +49,7 @@ export class Validator {
     }
 
     checkR() {
-        if (this.rEntity.value === "") {
+        if (this.rEntity.value == "" || this.rEntity.value == null) {
             this.message = "Enter R value. It can't be empty";
             return false;
         } else {

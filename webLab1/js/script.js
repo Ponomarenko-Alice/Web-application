@@ -4,7 +4,6 @@ const button = document.getElementById("submit");
 let form = document.querySelector(".main_form");
 
 
-
 button.addEventListener('click', async () => {
     let xEntity = form.querySelectorAll('.checkbox:checked'),
     yEntity = form.querySelector('[name="y"]'),
@@ -26,7 +25,9 @@ button.addEventListener('click', async () => {
         })
         try {
             if (!response.ok) {
-                throw new Error(`Server responded with bad getaway status: ${response.status}`);
+                const errorResponse = await response.json();
+                alert(`Server error: ${errorResponse.error_message}`);
+                return false;
             }
             let serverAnswer = await response.text();
             localStorage.setItem("session", serverAnswer);
@@ -35,7 +36,7 @@ button.addEventListener('click', async () => {
             alert(`There was an error processing your request: ${err.message}`)
         }
     } else {
-        alert(validator.message);
+        alert(validator.message)
     }
     
     

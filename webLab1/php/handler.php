@@ -62,6 +62,11 @@ if ($validator->checkCoordinates()) {
     
 }
 else {
-    echo "validation faild $x, $y, $r";
-}
+    http_response_code(503); 
+    $response = array(
+        "success" => false,
+        "error_message" => "Validation error: The submitted data is invalid."
+    );
+
+    echo json_encode($response);}
 
