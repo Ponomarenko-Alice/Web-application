@@ -19,7 +19,7 @@ button.addEventListener('click', async () => {
         params.set('r', r);
 
 
-        let response = await fetch(`../php/handler.php`, {
+        let response = await fetch(`https://se.ifmo.ru/~s368675/php/handler.php`, {
             method: 'POST',
             body: params
         })
