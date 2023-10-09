@@ -1,4 +1,4 @@
-import {Validator} from './validator';
+import {Validator} from './validator.js';
 // import '@bjnstnkvc/alert/src/alert.css';
 
 const button: HTMLElement | null = document.getElementById("submit");
